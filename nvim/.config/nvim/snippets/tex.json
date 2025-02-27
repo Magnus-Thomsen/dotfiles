@@ -1,0 +1,1 @@
+{"pow":{"body":"^{${1:}}","prefix":"pow"},"frac-1":{"prefix":"frac","body":"\\frac{${1:num}}{${2:num}}"},"date":{"prefix":"date","body":"$CURRENT_DATE. $CURRENT_MONTH_NAME_SHORT"}}

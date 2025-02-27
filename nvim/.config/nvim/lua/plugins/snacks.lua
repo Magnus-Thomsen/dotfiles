@@ -12,9 +12,11 @@ return {
                 sections = {
                     {
                         section = "terminal",
-                        cmd = "chafa ~/.config/wall.jpg --format symbols --symbols vhalf --size 60x17 --stretch; sleep .1",
-                        height = 17,
+                        cmd = "fortune -s | cowsay", 
+                        hl = "header",
+                        height = 25,
                         padding = 1,
+                        random = 10,
                     },
                     {
                         pane = 2,

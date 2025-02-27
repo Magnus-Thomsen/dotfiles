@@ -1,15 +1,27 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    config = function()
-        require("nvim-treesitter").setup({
-            sync_install = false,
-            auto_install = true,
-            ignore_install = {"latex"},
-            highlight = {
-                enable = true,
-                disable = {"latex"},
-            },
-            indent = { enable = false },
-        })
-    end
+
+    build = ":TSUpdate",
+
+    opts = {
+        highlight = {enable = true, disable = {"latex"}},
+        indent = {enable = true},
+        sync_install = {enable = false},
+        auto_install = {enable = true},
+        ensure_installed = {
+            "css",
+            "comment",
+            "html",
+            "lua",
+            "markdown",
+            "markdown_inline",
+            "python",
+            "vim",
+            "vimdoc",
+        },
+    },
+
+    config = function(_,opts)
+        require("nvim-treesitter.configs").setup(opts)
+    end,
 }

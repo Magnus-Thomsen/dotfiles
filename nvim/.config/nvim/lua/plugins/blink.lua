@@ -20,7 +20,7 @@ return {
             -- See the full "keymap" documentation for information on defining your own keymap.
             keymap = { 
                 preset = 'default',
-                ["<Tab>"] = { "accept", "fallback" },
+                ["<Tab>"] = { "snippet_forward", "accept", "fallback" },
                 ["<C-p>"] = { "select_prev", "fallback" },
                 ["<C-n>"] = { "select_next", "fallback" },
             },
@@ -29,6 +29,18 @@ return {
                 documentation = {
                     auto_show = true,
                     auto_show_delay_ms = 50
+                },
+
+                menu = {
+                    -- nvim-cmp style menu
+                    draw = {
+                        columns = {
+                            { "label",     "label_description", gap = 2 },
+                            { "kind_icon", "kind",              gap = 2 }
+                        },
+
+                        treesitter = { "lsp" },
+                    },
                 },
 
             },
@@ -47,6 +59,13 @@ return {
             -- elsewhere in your config, without redefining it, due to `opts_extend`
             sources = {
                 default = { 'lsp', 'path', 'snippets', 'buffer' },
+                providers = {
+                    snippets = {
+                        opts = {
+                            search_paths = { "~/.config/nvim/snippets/" },
+                        },
+                    }
+                },
             },
         },
         opts_extend = { "sources.default" }
