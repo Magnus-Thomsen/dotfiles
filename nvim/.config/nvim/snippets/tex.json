@@ -1,1 +1,1 @@
-{"pow":{"body":"^{${1:}}","prefix":"pow"},"frac-1":{"prefix":"frac","body":"\\frac{${1:num}}{${2:num}}"},"date":{"prefix":"date","body":"$CURRENT_DATE. $CURRENT_MONTH_NAME_SHORT"}}
+{"date":{"prefix":"date","body":"$CURRENT_DATE. $CURRENT_MONTH_NAME_SHORT"},"pow":{"body":"^{${1:}}","prefix":"pow"},"textcolor":{"prefix":"textcolor","body":"{\\color{${1:}}${2:}}"},"NN":{"body":"\\mathbb{N}","prefix":"NN"},"frac-1":{"prefix":"frac","body":"\\frac{${1:num}}{${2:num}}"}}

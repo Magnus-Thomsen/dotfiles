@@ -53,11 +53,4 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrw = 0
 vim.g.loaded_netrwPlugin = 0
 
-vim.g.vimtex_compiler_latexmk = {
-  options = {
-    '-shell-escape',
-    '-interaction=nonstopmode',
-    '-synctex=1'
-  }
-}
 
